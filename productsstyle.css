@@ -1,0 +1,264 @@
+* {
+    padding: 0;
+    box-sizing: border-box;
+}
+
+@font-face {
+  font-family: 'SEGA'; /* Nombre que le asignas a la fuente */
+  src: url('MR\ ROBOT.ttf')
+}
+
+@font-face {
+  font-family: 'Bebas';
+  src: url(BebasNeue-Regular.woff2);
+}
+
+
+header {
+    top: 0;
+    left: 0;
+    width: 100%;
+    padding: 5px 50px;
+    background: #0e0d0d;
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+    z-index: 99;
+
+}
+
+.logo {
+    font-size: 40px;
+    color: #243cec;
+    text-decoration: none;
+    font-weight: 100;
+    font-family: 'SEGA';
+    transition: color 0.2s ease;
+}
+
+.logo:hover {
+    color: white;
+}
+
+.logoicon {
+    width: 50px;
+    margin-left: 20px;
+}  
+
+nav {
+    gap: 20px;
+}
+
+nav i {
+    padding-right: 15px;
+}
+
+nav a {
+    font-size: 23.5px;
+    color: #fff;
+    text-decoration: none;
+    font-weight: 150;
+    margin-left: 20px;
+    transition: .3s;
+    font-family: 'Bebas';
+}
+
+nav a:hover,
+nav a.active {
+    color:#3e9cdb;
+}
+
+section {
+    background: #0e0d0d;
+    color: #fff;
+    font-weight: 700;
+    text-transform: uppercase;
+}
+
+body {
+    margin: 0;
+    font-family: sans-serif;
+    background-color: #1b1b1b;
+  }
+
+body a {
+    text-decoration: none;
+  }
+  
+  .wrapper {
+    background: #1b1b1b;
+  }
+  .wrapper .content {
+    margin: 25px auto;
+    width: 90%;
+    max-width: 1200px;
+    box-shadow: 0px 0px 15px 15px rgba(0, 0, 0, 0.1);
+  }
+  .wrapper .sections {
+    padding: 25px 0;
+  }
+  
+  .col {
+    position: relative;
+    flex-basis: 25%;
+    padding-left: 25px;
+    text-align: center;
+  }
+  
+  .product-section {
+    position: relative;
+    padding-bottom: 25px;
+  }
+  .product-section h2 {
+    color: #ff0c41;
+  }
+  
+  .ribbon {
+    background: blue;
+    color: #f6f6f6;
+    padding: 0.1em 1.5em;
+    display: inline-block;
+    position: absolute;
+  }
+  .ribbon p {
+    line-height: 0;
+    text-transform: uppercase;
+  }
+  
+  .button {
+    background: red;
+    padding: 0.5em 1.5em;
+    border-radius: 5px;
+    box-shadow: 0px 3px 0px #990000;
+    color: #f6f6f6;
+    font-weight: bold;
+    display: inline-block;
+    text-align: center;
+  }
+  
+  .feature-list li {
+    display: inline-block;
+    line-height: 1.6;
+  }
+
+/*Boton*/
+
+  .uiverse {
+    position: relative;
+    background: #ffffff;
+    color: #000;
+    padding: 15px;
+    margin: 10px;
+    border-radius: 10px;
+    width: 150px;
+    height: 50px;
+    font-size: 17px;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    flex-direction: column;
+    box-shadow: 0 10px 10px rgba(0, 0, 0, 0.1);
+    cursor: pointer;
+    transition: all 0.2s cubic-bezier(0.68, -0.55, 0.265, 1.55);
+  }
+  
+  .tooltip {
+    position: absolute;
+    top: 0;
+    font-size: 14px;
+    background: #ffffff;
+    color: #ffffff;
+    padding: 5px 8px;
+    border-radius: 5px;
+    box-shadow: 0 10px 10px rgba(0, 0, 0, 0.1);
+    opacity: 0;
+    pointer-events: none;
+    transition: all 0.3s cubic-bezier(0.68, -0.55, 0.265, 1.55);
+  }
+  
+  .tooltip::before {
+    position: absolute;
+    content: "";
+    height: 8px;
+    width: 8px;
+    background: #ffffff;
+    bottom: -3px;
+    left: 50%;
+    transform: translate(-50%) rotate(45deg);
+    transition: all 0.3s cubic-bezier(0.68, -0.55, 0.265, 1.55);
+  }
+  
+  .uiverse:hover .tooltip {
+    top: -45px;
+    opacity: 1;
+    visibility: visible;
+    pointer-events: auto;
+  }
+  
+  svg:hover span,
+  svg:hover .tooltip {
+    text-shadow: 0px -1px 0px rgba(0, 0, 0, 0.1);
+  }
+  
+  .uiverse:hover,
+  .uiverse:hover .tooltip,
+  .uiverse:hover .tooltip::before {
+    background: linear-gradient(320deg, rgb(3, 77, 146), rgb(0, 60, 255));
+    color: #ffffff;
+  }
+  
+  @media only screen and (min-width: 1024px) {
+    .flex {
+      display: flex;
+    }
+  
+    .col {
+      padding: 0 25px;
+      text-align: left;
+    }
+  
+    .feature-list li {
+      display: block;
+    }
+  
+    .product-section {
+      padding-top: 5em;
+      border-bottom: 1px solid gray;
+      padding-bottom: 25px;
+    }
+    .product-section:first-child {
+      padding-top: 4em;
+    }
+    .product-section:last-child {
+      border-bottom: none;
+    }
+  
+    .ribbon {
+      top: -4em;
+      left: -1em;
+      border-top-left-radius: 1em;
+      border-bottom-right-radius: 1em;
+    }
+    .ribbon:before {
+      content: "";
+      position: absolute;
+      width: 0;
+      height: 0;
+      border: 0.5em solid #000099;
+      border-left-color: transparent;
+      border-bottom-color: transparent;
+      left: 0;
+      bottom: -1em;
+    }
+  }
+
+
+
+@media screen and (max-width: 500px) {
+    .navbar a {
+      float: none;
+      display: block;
+    }
+  }
+
+  

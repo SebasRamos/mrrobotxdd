@@ -1,0 +1,207 @@
+* {
+    margin: 0;
+    padding: 0;
+    box-sizing: border-box;
+}
+
+
+@font-face {
+    font-family: 'SEGA'; /* Nombre que le asignas a la fuente */
+    src: url('MR\ ROBOT.ttf')
+}
+
+@font-face {
+    font-family: 'Bebas';
+    src: url(BebasNeue-Regular.woff2);
+}
+
+@font-face {
+    font-family: 'Roboto';
+    src: url(Roboto-LightItalic.ttf);
+}
+
+@font-face {
+    font-family: 'Roboto2';
+    src: url(Roboto-Condensed.ttf);
+}
+
+
+nav i {
+    padding-right: 15px;
+}
+
+header {
+    position: fixe;
+    top: 0;
+    left: 0;
+    width: 100%;
+    padding: 15px 50px;
+    background: #0e0d0d;
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+    z-index: 99;
+}
+
+.logo {
+    font-size: 40px;
+    color: #243cec;
+    text-decoration: none;
+    font-weight: 100;
+    font-family: 'SEGA';
+    transition: color 0.2s ease;
+}
+
+.logo:hover {
+    color: white;
+}
+
+.logoicon {
+    width: 50px;
+    margin-left: 20px;
+}  
+
+nav a {
+    font-size: 23.5px;
+    color: #fff;
+    text-decoration: none;
+    font-weight: 150;
+    margin-left: 20px;
+    transition: .3s;
+    font-family: 'Bebas';
+}
+
+nav a:hover,
+nav a.active {
+    color:#3e9cdb;
+}
+
+section {
+    min-height: 100vh;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    background: #1b1b1b;
+    color: #fff;
+}
+
+form {
+    padding: 35px 55px;
+    box-shadow: 0 0 20px rgba(255, 255, 255, 0.6);
+    border-radius: 20px;
+    text-align: center;
+    width: 950px;
+    border: solid 1.7px;
+}
+
+@media screen and (max-width: 1400px) {
+
+    form {
+        margin: 25px;
+        margin-top: 50px;
+        width: px;
+    }
+
+}
+
+/*Iphone 6,7,8*/
+
+@media screen and (max-width: 375px) {
+
+    form {
+        margin: 25px;
+        margin-top: 50px;
+        width: 350px;
+    }
+
+}
+
+.validornot:valid {
+    outline: 0.6px solid  rgb(0, 183, 255);
+    transition: 0.5s ease;
+}
+
+.validornot:invalid {
+    outline: 0.6px solid  rgb(255, 0, 0);
+    transition: 0.5s ease;
+}
+
+.input-group {
+    display: flex;
+    flex-direction: column;
+    text-align: left;
+}
+
+h2 {
+    margin-top: 20px;
+    font-weight: 100;
+    font-family: 'SEGA';
+    color: #ffffff;
+    font-size: 45px;
+}
+
+label {
+    font-family: 'Roboto';
+    letter-spacing: 2px;
+    color: #ffffff;
+    font-size: 15px;
+    margin-bottom: 15px;
+}
+
+input, textarea {
+    font-family: 'Roboto2';
+    font-size: 15px;
+    padding: 17px 25px;
+    border-radius: 25px;
+    margin-bottom: 20px;
+    background-color: #dbddf3;
+    border: 2px solid #d5e3ff;
+    outline: none;
+}
+
+textarea {
+    resize: none;
+}
+
+input::placeholder, textarea::placeholder {
+    color: rgb(61, 60, 60);
+}
+
+.btn {
+    font-family: 'Roboto2';
+    padding: 20px;
+    font-size: 16px;
+    color: #fff;
+    border: 0;
+    border-radius: 25px;
+    background-color: #376fb8;
+    box-shadow: 0 0 20px rgba(93, 94, 95, 0.5);
+    cursor: pointer;
+}
+
+.btn:hover {
+    color: #000000;
+    background-color: #add8e6;
+}
+
+.btn:active {
+    background-color: rgb(129, 224, 255);
+}
+
+.fa-paper-plane {
+    margin-right: 10px;
+}
+
+input:-webkit-autofill,
+input:-webkit-autofill:hover, 
+input:-webkit-autofill:focus, 
+input:-webkit-autofill:active{
+    -webkit-box-shadow: 0 0 0 30px white inset !important;
+}
+
+@media screen and (max-width: 500px) {
+    .navbar a {
+      float: none;
+      display: block;
+    }
+  }
